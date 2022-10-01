@@ -37,8 +37,7 @@ export default function Home() {
 
   const getHuff = async () => {
     const { data } = await api.get("/house/Hufflepuff");
-    let filteredImage = data.filter((item) => item.image);
-    setCharacterHuff(filteredImage.slice(0, 2));
+    setCharacterHuff(data.slice(0, 2));
     console.log(data);
   };
 
