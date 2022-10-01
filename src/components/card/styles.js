@@ -11,6 +11,7 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-image: ${({ image }) => `url(${image})`};
+  background-position: center;
 
   img {
     width: 100%;

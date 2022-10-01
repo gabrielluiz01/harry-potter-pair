@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import * as styles from "./styles";
+import User from "../../assets/user.jpeg";
 
 export default function Card({ data }) {
   const [cardSelected, setCardSelected] = useState();
-
-  console.log("teste", cardSelected);
 
   return data.map((item) => (
     <styles.Container
       onMouseEnter={() => setCardSelected(item)}
       onMouseLeave={() => setCardSelected({})}
-      image={item.image}
+      image={item.image ? item.image : User}
     >
       {cardSelected === item && (
         <styles.Content>
