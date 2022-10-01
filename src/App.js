@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { api } from "./services/api";
+import Card from "./card";
 
-function App() {
+export default function App() {
+  const [character, setCharacter] = useState([]);
+
+  useEffect(() => {
+    getApi();
+  }, []);
+
+  const getApi = async () => {
+    const { data } = await api.get();
+    setCharacter(data.slice(0, 25));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Card data={character} />
     </div>
   );
 }
-
-export default App;
