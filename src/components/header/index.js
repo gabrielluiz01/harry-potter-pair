@@ -11,12 +11,18 @@ export default function Header() {
           <Link to="/">
             <li>Home</li>
           </Link>
-          <Link to="/grifinoria">
+          <Link to="/gryffindor">
             <li>Gryffindor</li>
           </Link>
-          <li>Slytherin</li>
-          <li>Ravenclaw</li>
-          <li>Hufflepuff</li>
+          <Link to="slytherin">
+            <li>Slytherin</li>
+          </Link>
+          <Link to="ravenclaw">
+            <li>Ravenclaw</li>
+          </Link>
+          <Link to="hufflepuff">
+            <li>Hufflepuff</li>
+          </Link>
         </ul>
       </Menu>
     </Container>
