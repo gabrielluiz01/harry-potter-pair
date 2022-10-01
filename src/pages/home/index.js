@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import Card from "../../components/card";
+import * as styles from "./styles";
 
 export default function Home() {
   const [character, setCharacter] = useState([]);
@@ -15,8 +16,8 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <styles.BoxCard>
       <Card data={character} />
-    </div>
+    </styles.BoxCard>
   );
 }
