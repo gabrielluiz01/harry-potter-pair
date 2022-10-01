@@ -7,7 +7,7 @@ export default function Card({ data }) {
     <styles.Container>
       <img src={item.image} />
       <h3>{item.name}</h3>
-      <p>{item.house}</p>
+      <button>Details</button>
     </styles.Container>
   ));
 }

@@ -5,7 +5,7 @@ export const Container = styled.header`
   background: #212121;
   padding: 0.5rem 3rem;
   box-shadow: 1px 1px 20px 1px #fae032;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.7rem;
 `;
 
 export const Menu = styled.nav`
