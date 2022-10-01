@@ -14,9 +14,11 @@ export default function Card({ data }) {
       {cardSelected === item && (
         <styles.Content>
           <h3>{cardSelected?.name}</h3>
-          <p>Ator: {cardSelected?.actor}</p>
-          <p>Casa: {cardSelected?.house}</p>
-          <p>Data de nasc. {cardSelected?.dateOfBirth}</p>
+          <span>
+            <p>Ator: {cardSelected?.actor}</p>
+            <p>Casa: {cardSelected?.house}</p>
+            <p>Data de nasc. {cardSelected?.dateOfBirth}</p>
+          </span>
         </styles.Content>
       )}
     </styles.Container>
